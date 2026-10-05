@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Басты бет | VENDO.KZ</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+<header class="header">
+  <div class="nav">
+    <a class="logo" href="index.html">VENDO<span>.KZ</span></a>
+    <nav>
+      <a class="active" href="index.html">Басты бет</a>
+      <a class="" href="about.html">Біз туралы</a>
+      <a class="" href="services.html">Қызмет пен бөлімдер</a>
+      <a class="" href="news.html">Жаңалықтар</a>
+      <a class="" href="contact.html">Байланыс</a>
+    </nav>
+    <div class="top-actions">
+      <div class="search"><input id="search" placeholder="Тауар іздеу..."><button onclick="search()">⌕</button></div>
+      <a class="head-icon" href="login.html" title="Кіру">♙</a>
+      <a class="head-icon" href="#" onclick="return false" title="Таңдаулылар">♡</a>
+      <button class="head-icon cart-btn" onclick="openCart()">🛒<b id="cartCount">0</b></button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page home-page">
+  <div class="promo-carousel" id="promoCarousel" aria-label="Акциялар мен ұсыныстар">
+    <button class="promo-arrow promo-prev" type="button" onclick="changePromo(-1)" aria-label="Алдыңғы слайд">‹</button>
+    <div class="promo-track">
+      <article class="promo-slide active">
+        <div class="promo-copy">
+          <p class="eyebrow">VENDO.KZ — СЕНІМДІ ИНТЕРНЕТ-ДҮКЕН</p>
+          <h1>Сапалы тауарлар<br><span>жақсы бағамен!</span></h1>
+          <p class="lead">Қажетті тауарды оңай таңдаңыз. Сенімді сатып алу және жылдам жеткізу — бәрі бір жерде.</p>
+          <a class="primary" href="#products">Сатып алу →</a>
+        </div>
+        <div class="promo-visual blue-visual">
+          <div class="promo-orb"></div>
+          <img src="images/iphone15.jpg" alt="iPhone 15">
+          <div class="promo-badge">ЖАҢА</div>
+        </div>
+      </article>
+      <article class="promo-slide">
+        <div class="promo-copy">
+          <p class="eyebrow"> АРНАЙЫ ҰСЫНЫС</p>
+          <h1>Сүйікті тауарларға<br><span>үлкен жеңілдік!</span></h1>
+          <p class="lead">Таңдаулы өнімдерге арнайы бағалар. Акцияны жіберіп алмаңыз!</p>
+          <a class="primary" href="#products">Акцияларды көру →</a>
+        </div>
+        <div class="promo-visual sale-visual">
+          <div class="sale-percent">%</div>
+          <img src="images/playstation-ps5.jpg" alt="PlayStation">
+          <div class="promo-badge sale-badge">АКЦИЯ</div>
+        </div>
+      </article>
+      <article class="promo-slide">
+        <div class="promo-copy">
+          <p class="eyebrow"> ТАНЫМАЛ ТАУАРЛАР</p>
+          <h1>Технология<br><span>өзіңе жақын!</span></h1>
+          <p class="lead">Смартфон, құлаққап, смарт сағат және басқа да танымал тауарларды бір жерден табыңыз.</p>
+          <a class="primary" href="#products">Каталогқа өту →</a>
+        </div>
+        <div class="promo-visual tech-visual">
+          <div class="promo-orb"></div>
+          <img src="images/jbl.jpg" alt="JBL құлаққап">
+          <div class="promo-badge">ТОП</div>
+        </div>
+      </article>
+    </div>
+    <button class="promo-arrow promo-next" type="button" onclick="changePromo(1)" aria-label="Келесі слайд">›</button>
+    <div class="promo-dots" role="tablist" aria-label="Слайдтар">
+      <button class="promo-dot active" type="button" onclick="goPromo(0)" aria-label="1-слайд"></button>
+      <button class="promo-dot" type="button" onclick="goPromo(1)" aria-label="2-слайд"></button>
+      <button class="promo-dot" type="button" onclick="goPromo(2)" aria-label="3-слайд"></button>
+    </div>
+  </div>
+
+  <div class="title-row"><h2>Санаттар</h2></div>
+  <div class="categories">
+    <a href="#products" onclick="filterCategory('Электроника')"><i><img src="images/1.png" alt="Электроника"></i>Электроника</a>
+    <a href="#products" onclick="filterCategory('Киім')"><i><img src="images/2.png" alt="Киім"></i>Киім</a>
+    <a href="#products" onclick="filterCategory('Аяқ киім')"><i><img src="images/3.png" alt="Аяқ киім"></i>Аяқ киім</a>
+    <a href="#products" onclick="filterCategory('Үйге арналған')"><i><img src="images/4.png" alt="Үйге арналған"></i>Үйге арналған</a>
+    <a href="#products" onclick="filterCategory('Спорт')"><i><img src="images/5.png" alt="Спорт"></i>Спорт</a>
+    <a href="#products" onclick="filterCategory('Ойындар')"><i><img src="images/6.png" alt="Ойындар"></i>Ойындар</a>
+  </div>
+
+  <div class="title-row" id="products"><h2>Танымал тауарлар</h2><button class="link-btn" onclick="showAll()">Барлық тауарлар →</button></div>
+  <div class="products" id="productGrid"></div>
+
+  <div class="promo"><div><b> Акция</b><h2>Жеңілдіктерді жіберіп алма!</h2><button class="primary small" onclick="showToast('Акциялар бөлімі ашылды')">Толығырақ</button></div><strong class="percent">%</strong></div>
+</section>
+
+</main>
+<footer>
+  <div><strong>VENDO<span>.KZ</span></strong><small>Сенімді таңдау!</small></div>
+  <div><b>Жылдам сілтемелер</b><a href="index.html">Басты бет</a><a href="about.html">Біз туралы</a><a href="services.html">Қызмет пен бөлімдер</a><a href="news.html">Жаңалықтар</a><a href="contact.html">Байланыс</a></div>
+  <div><b>Бізбен байланыс</b><span>Instagram · Telegram · TikTok</span><span>+7 700 123 45 67</span></div>
+</footer>
+<div id="modal" class="modal" onclick="backdrop(event)"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="js/script.js"></script>
+
+  <div class="floating-social" aria-label="Әлеуметтік желілер">
+    <a class="telegram" href="https://t.me/vendo_kz_bot" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 18.2 20c-.25 1.15-.92 1.43-1.86.9l-5.12-3.77-2.47 2.38c-.27.27-.5.5-1.02.5l.37-5.2 9.46-8.55c.41-.37-.09-.58-.64-.21L5.22 13.36.17 11.78c-1.1-.35-1.12-1.1.23-1.61L20.1 2.48c.91-.33 1.7.22 1.4 1.02Z"/></svg>
+    </a>
+    <a class="instagram" href="https://www.instagram.com/vendo_kz/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm9.95 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+    </a>
+  </div>
+
+</body>
+</html>

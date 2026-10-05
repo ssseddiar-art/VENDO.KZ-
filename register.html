@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Тіркелу | VENDO.KZ</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="auth-wrap">
+
+        <!-- Сол жақ ақпараттық блок -->
+        <section class="brand-side">
+
+            <div class="brand-logo">
+                VENDO<span>.KZ</span>
+            </div>
+
+            <h1>Аккаунт жасаңыз</h1>
+
+            <p>
+                Тіркеліп, VENDO.KZ мүмкіндіктерін пайдаланыңыз.
+            </p>
+
+            <div class="brand-points">
+                <div>✓ Жеке профиль</div>
+                <div>✓ Себет және тапсырыстар</div>
+                <div>✓ Таңдаулылар</div>
+            </div>
+
+        </section>
+
+
+        <!-- Тіркелу формасы -->
+        <section class="auth-card">
+
+            <a class="back" href="index.html">
+                ← VENDO.KZ сайтына қайту
+            </a>
+
+            <h2>Тіркелу</h2>
+
+            <p class="sub">
+                Жаңа аккаунт жасаңыз
+            </p>
+
+            <form id="registerForm">
+
+                <!-- Аты-жөні -->
+                <div class="field">
+
+                    <label for="regName">
+                        Аты-жөні
+                    </label>
+
+                    <div class="field-box">
+
+                        <span>♙</span>
+
+                        <input
+                            id="regName"
+                            type="text"
+                            required
+                            placeholder="Аты-жөні"
+                        >
+
+                    </div>
+
+                    <div
+                        class="error"
+                        id="regNameError">
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="field">
+
+                    <label for="regEmail">
+                        Email
+                    </label>
+
+                    <div class="field-box">
+
+                        <span>✉</span>
+
+                        <input
+                            id="regEmail"
+                            type="email"
+                            required
+                            placeholder="Email"
+                        >
+
+                    </div>
+
+                    <div
+                        class="error"
+                        id="regEmailError">
+                    </div>
+
+                </div>
+
+
+                <!-- Телефон -->
+                <div class="field">
+
+                    <label for="regPhone">
+                        Телефон
+                    </label>
+
+                    <div class="field-box">
+
+                        <span>☎</span>
+
+                        <input
+                            id="regPhone"
+                            type="tel"
+                            required
+                            placeholder="+7 700 123 45 67"
+                        >
+
+                    </div>
+
+                    <div
+                        class="error"
+                        id="regPhoneError">
+                    </div>
+
+                </div>
+
+
+                <!-- Құпиясөз -->
+                <div class="field">
+
+                    <label for="regPass">
+                        Құпиясөз
+                    </label>
+
+                    <div class="pass-wrap">
+
+                        <div class="field-box">
+
+                            <span>🔒</span>
+
+                            <input
+                                id="regPass"
+                                type="password"
+                                minlength="6"
+                                required
+                                placeholder="Кемінде 6 таңба"
+                            >
+
+                            <button
+                                type="button"
+                                class="pass-toggle"
+                                data-toggle="regPass"
+                                title="Көрсету"
+                                aria-label="Құпиясөзді көрсету"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="error"
+                        id="regPassError">
+                    </div>
+
+                </div>
+
+
+                <!-- Тіркелу -->
+                <button
+                    type="submit"
+                    class="auth-btn">
+                    Тіркелу
+                </button>
+
+            </form>
+
+
+            <!-- Кіру -->
+            <p class="switch-text">
+                Аккаунтыңыз бар ма?
+                <a href="login.html">Кіру</a>
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

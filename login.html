@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кіру | VENDO.KZ</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="auth-wrap">
+
+        <!-- Сол жақ ақпараттық блок -->
+        <section class="brand-side">
+
+            <div class="brand-logo">
+                VENDO<span>.KZ</span>
+            </div>
+
+            <h1>Қош келдіңіз!</h1>
+
+            <p>
+                VENDO.KZ аккаунтыңызға кіріп,
+                сатып алуды жалғастырыңыз.
+            </p>
+
+            <div class="brand-points">
+                <div>✓ Қауіпсіз аккаунт</div>
+                <div>✓ Жылдам тапсырыс</div>
+                <div>✓ Таңдаулы тауарлар</div>
+            </div>
+
+        </section>
+
+
+        <!-- Кіру формасы -->
+        <section class="auth-card">
+
+            <a class="back" href="index.html">
+                ← VENDO.KZ сайтына қайту
+            </a>
+
+            <h2>Кіру</h2>
+
+            <p class="sub">
+                Аккаунтыңызға кіріңіз
+            </p>
+
+            <form id="loginForm">
+
+                <!-- Email / Телефон -->
+                <div class="field">
+
+                    <label for="loginEmail">
+                        Email немесе телефон
+                    </label>
+
+                    <div class="field-box">
+
+                        <span>♙</span>
+
+                        <input
+                            id="loginEmail"
+                            type="text"
+                            required
+                            placeholder="Email / Телефон"
+                        >
+
+                    </div>
+
+                    <div
+                        class="error"
+                        id="loginEmailError">
+                    </div>
+
+                </div>
+
+
+                <!-- Құпиясөз -->
+                <div class="field">
+
+                    <label for="loginPass">
+                        Құпиясөз
+                    </label>
+
+                    <div class="pass-wrap">
+
+                        <div class="field-box">
+
+                            <span>🔒</span>
+
+                            <input
+                                id="loginPass"
+                                type="password"
+                                minlength="6"
+                                required
+                                placeholder="Құпиясөз"
+                            >
+
+                            <button
+                                type="button"
+                                class="pass-toggle"
+                                data-toggle="loginPass"
+                                title="Көрсету"
+                                aria-label="Құпиясөзді көрсету"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="error"
+                        id="loginPassError">
+                    </div>
+
+                </div>
+
+
+                <!-- Кіру батырмасы -->
+                <button
+                    type="submit"
+                    class="auth-btn">
+                    Кіру
+                </button>
+
+            </form>
+
+
+            <!-- Тіркелу -->
+            <p class="switch-text">
+                Аккаунтыңыз жоқ па?
+                <a href="register.html">
+                    Тіркелу
+                </a>
+            </p>
+
+        </section>
+
+    </div>
+
+
+    
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
